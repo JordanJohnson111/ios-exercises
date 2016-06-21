@@ -11,8 +11,21 @@
 @implementation EqualityDeterminer
 
 - (BOOL) string:(NSString *)string1 isTheSameAsString:(NSString *)string2 {
+    BOOL areTheyEqual = string1 == string2;
+    if (areTheyEqual == YES){
+        NSString *result = @"Cereals should be equal.";
+        return result;
+    } else {
+        if (areTheyEqual == NO){
+            NSString *result = @"Cereals should not be equal.";
+            return result;
+        } else {
+            return nil;
+            
+        }
+    
+    }
     /* WORK HERE */
-    return (string1 == string2);
 }
 
 - (BOOL) number:(NSNumber *)number1 isTheSameAsNumber:(NSNumber *)number2 {
