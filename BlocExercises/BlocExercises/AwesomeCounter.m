@@ -13,7 +13,7 @@
 - (NSString *) stringWithNumbersBetweenNumber:(NSInteger)number andOtherNumber: (NSInteger)otherNumber {
     NSInteger large;
     NSInteger small;
-    NSMutableString *numberString = [NSMutableString stringWithString:@""];
+    
     
     if (number >= otherNumber) {
         large = number;
@@ -22,8 +22,12 @@
         large = otherNumber;
         small = number;
     }
-    for (NSInteger small; small <= large; small++) {
-        [numberString appendFormat:@"%ld",small];
+    
+    NSMutableString *numberString = [[NSMutableString alloc] initWithCapacity:large-small+1];
+
+    
+    for (NSInteger i=small; i <= large; i++) {
+        [numberString appendFormat:@"%ld",i];
         
         /*numberString = [NSMutableString stringWithFormat:@"%ld",small];
         [numberString appendString:[NSMutableString stringWithFormat:@"%ld", small]];*/
