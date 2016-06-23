@@ -22,22 +22,32 @@
      
      (You will learn more about if/else statements in a later checkpoint.)
      */
+
+    NSString *sentenceOnlyCheeseString;
+    
     if ([[cheeseName lowercaseString] hasSuffix:@" cheese"]) {
         NSRange cheeseRange = [cheeseName rangeOfString:@" cheese" options:NSCaseInsensitiveSearch];
-        NSString *sentenceOnlyCheeseString = [cheeseName stringByReplacingCharactersInRange:cheeseRange withString:@""];
-        return sentenceOnlyCheeseString;
+        sentenceOnlyCheeseString = [cheeseName stringByReplacingCharactersInRange:cheeseRange withString:@""];
+        /*return sentenceOnlyCheeseString;*/
         /* WORK HERE, ASSUMING `cheeseName` ENDS WITH " cheese" */
+    
     } else {
-        NSString *sentenceOnlyCheeseString = cheeseName;
-        return sentenceOnlyCheeseString;
+        sentenceOnlyCheeseString = cheeseName;
+        /*return sentenceOnlyCheeseString;*/
         /* WORK HERE, ASSUMING `cheeseName` DOES NOT END WITH " cheese" */
     }
+    return sentenceOnlyCheeseString;
 
     /*
+    NSMutableString *onlyCheeseString = [NSMutableString stringWithString:cheeseName];
+    [onlyCheeseString appendString:@" cheese"];
+    NSRange cheeseRange = [onlyCheeseString rangeOfString:@" cheese" options:NSCaseInsensitiveSearch];
+    sentenceOnlyCheeseString = [onlyCheeseString stringByReplacingCharactersInRange:cheeseRange withString:@""];
+    return sentenceOnlyCheeseString;
+     */
+    
+    /*
      There is also a solution that doesn't require the if/else statement.
-     NSRange cheeseRange = [cheeseName rangeOfString:@" cheese" options:NSCaseInsensitiveSearch];
-     NSString *senetneceOnlyCheeseString = [cheeseName stringbyReplacingCharactersInRange:cheeseRange withString:@""]
-     NSNotFound....Not sure on syntax
      Try to find both solutions. Discuss the different approaches with
      your mentor.
      */
@@ -45,17 +55,15 @@
 }
 
 - (NSString *) numberOfCheesesStringWithCheeseCount:(NSUInteger)cheeseCount {
+    NSString *cheeseQuantity;
     if (cheeseCount == 1) {
-        NSString *cheeseQuantity = @"1 cheese";
-        return cheeseQuantity;
+        cheeseQuantity = [NSString stringWithFormat:@"%ld cheese", cheeseCount];
         /* WORK HERE, ASSUMING THERE IS 1 CHEESE */
     } else {
-        NSString *integerString = @"%ld", *cheeseCount;
-        NSString *cheeseQuantity = (@"%ld cheeses", integerString);
-        return cheeseQuantity;
+        cheeseQuantity = [NSString stringWithFormat:@"%ld cheeses", cheeseCount];
         /* WORK HERE, ASSUMING THERE ARE 2+ CHEESES */
     }
-    
+    return cheeseQuantity;
     /*
      (You will learn more about if/else statements in a later checkpoint.)
      */
