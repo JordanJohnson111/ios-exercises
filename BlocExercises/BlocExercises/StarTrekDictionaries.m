@@ -10,7 +10,26 @@
 
 @implementation StarTrekDictionaries
 
+NSDictionary *worfDictionary = @{@"name": @"Worf",
+                                 @"rank": @"lieutenant",
+                                 @"information": @"son of Mogh, slayer of Gowron",
+                                 @"favorite drink": @"prune juice",
+                                 @"quote" : @"Today is a good day to die."};
+
+NSDictionary *picardDictionary = @{@"name": @"Jean-Luc Picard",
+                                   @"rank": @"captain",
+                                   @"information": @"Captain of the USS Enterprise",
+                                   @"favorite drink": @"tea, Earl Grey, hot"};
+
+NSDictionary *starTrekDictionary = @{@"Worf" : worfDictionary,
+                                     @"Picard" : picardDictionary};
+
+
 - (NSString *)favoriteDrinkForStarTrekCharacterDictionary:(NSDictionary *)characterDictionary {
+    [starTrekDictionary enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *STOP){
+        NSString *favDrink = objectForKey (character.favoriteDrink)
+    }];
+    
     /* WORK HERE */
     return @"";
 }
