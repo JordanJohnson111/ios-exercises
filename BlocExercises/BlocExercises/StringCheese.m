@@ -23,24 +23,24 @@
      */
 
     /*NSString *cheeseOnly;*/
-/*
-    if ([[cheeseName lowercaseString] hasSuffix:@" cheese"]) {
-        NSRange cheeseRange = [cheeseName rangeOfString:@" cheese" options:NSCaseInsensitiveSearch];
-        NSString *cheeseOnly = [cheeseName stringByReplacingCharactersInRange:cheeseRange withString:@""];
-        return cheeseOnly;
-        /* WORK HERE, ASSUMING `cheeseName` ENDS WITH " cheese" */
-/*
-    } else {
-        NSString *cheeseOnly = cheeseName;
-        return cheeseOnly;
-        /* WORK HERE, ASSUMING `cheeseName` DOES NOT END WITH " cheese" */
-    /*
-    }
-}
-*/
+//
+//    if ([[cheeseName lowercaseString] hasSuffix:@" cheese"]) {
+//        NSRange cheeseRange = [cheeseName rangeOfString:@" cheese" options:NSCaseInsensitiveSearch];
+//        NSString *cheeseOnly = [cheeseName stringByReplacingCharactersInRange:cheeseRange withString:@""];
+//        return cheeseOnly;
+//        /* WORK HERE, ASSUMING `cheeseName` ENDS WITH " cheese" */
+//    
+//    } else {
+//        NSString *cheeseOnly = cheeseName;
+//        return cheeseOnly;
+//        /* WORK HERE, ASSUMING `cheeseName` DOES NOT END WITH " cheese" */
+//    /*
+//    }
+//}
+//*/
 
 
-    NSString *cheeseOnly = [cheeseName stringByReplacingOccurrencesOfString:@" cheese" withString:@""options:NSCaseInsensitiveSearch];
+    NSString *cheeseOnly = [cheeseName stringByReplacingOccurrencesOfString:@" cheese" withString:@"" options:NSCaseInsensitiveSearch range:NSMakeRange(0, cheeseName.length)];
     return cheeseOnly;
     
 }
