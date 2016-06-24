@@ -23,10 +23,11 @@
 }
 
 - (NSArray *) alphabeticallySortedStarTrekCharactersFromArray:(NSArray *)characterArray {
-    NSString *starTrekString = [characterArray componentsJoinedByString:@";"];
-    NSMutableArray *starTrekArray = [[starTrekString componentsSeparatedByString:@";"]mutableCopy];
+    
+   // NSMutableArray *starTrekArray = [characterArray mutableCopy];
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:nil ascending:YES selector:@selector(localizedCaseInsensitiveCompare:)];
-    [starTrekArray sortUsingDescriptors:@[sortDescriptor]];
+    //[starTrekArray sortUsingDescriptors:@[sortDescriptor]];
+    NSArray *starTrekArray = [characterArray sortedArrayUsingDescriptors:@[sortDescriptor]];
     
     /* WORK HERE */
     return starTrekArray;
