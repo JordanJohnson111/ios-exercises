@@ -23,29 +23,27 @@
      */
 
     /*NSString *cheeseOnly;*/
-    
+/*
     if ([[cheeseName lowercaseString] hasSuffix:@" cheese"]) {
         NSRange cheeseRange = [cheeseName rangeOfString:@" cheese" options:NSCaseInsensitiveSearch];
         NSString *cheeseOnly = [cheeseName stringByReplacingCharactersInRange:cheeseRange withString:@""];
         return cheeseOnly;
         /* WORK HERE, ASSUMING `cheeseName` ENDS WITH " cheese" */
-    
+/*
     } else {
         NSString *cheeseOnly = cheeseName;
         return cheeseOnly;
         /* WORK HERE, ASSUMING `cheeseName` DOES NOT END WITH " cheese" */
+    /*
     }
 }
-    /*return sentenceOnlyCheeseString;*/
+*/
 
-    /*
-    NSMutableString *onlyCheeseString = [NSMutableString stringWithString:cheeseName];
-    [onlyCheeseString appendString:@" cheese"];
-    NSRange cheeseRange = [onlyCheeseString rangeOfString:@" cheese" options:NSCaseInsensitiveSearch];
-    sentenceOnlyCheeseString = [onlyCheeseString stringByReplacingCharactersInRange:cheeseRange withString:@""];
-    return sentenceOnlyCheeseString;
-     */
+
+    NSString *cheeseOnly = [cheeseName stringByReplacingOccurrencesOfString:@" cheese" withString:@""options:NSCaseInsensitiveSearch];
+    return cheeseOnly;
     
+}
     /*
      There is also a solution that doesn't require the if/else statement.
      Try to find both solutions. Discuss the different approaches with
