@@ -20,21 +20,18 @@
     
     if (dollars < gum) {
         itemToReturn = @"get out of my store";
+    } else if (dollars == gum) {
+        itemToReturn = @"have some gum";
+    } else if (dollars == apple) {
+        itemToReturn = @"have an apple";
+    } else if (dollars == computer) {
+        itemToReturn = @"have an Apple computer";
+    } else if (dollars == bigApple) {
+        itemToReturn = @"have The Big Apple";
     } else {
-        if (dollars == gum) {
-            itemToReturn = @"have some gum";
-        } else {
-            if (dollars == apple) {
-                itemToReturn = @"have an apple";
-            } else {
-                if (dollars == computer) {
-                    itemToReturn = @"have an Apple computer";
-                } else {
-                    if (dollars == bigApple) {
-                        itemToReturn = @"have The Big Apple";
-                    } else {
-                        itemToReturn = getOut;
-                    }}}}}
+        itemToReturn = getOut;
+    }
+    
 
     /* WORK HERE */
     
