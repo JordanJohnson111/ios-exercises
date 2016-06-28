@@ -20,13 +20,13 @@
     
     if (dollars < gum) {
         itemToReturn = @"get out of my store";
-    } else if (dollars == gum) {
+    } else if (dollars < apple) {
         itemToReturn = @"have some gum";
-    } else if (dollars == apple) {
+    } else if (dollars < computer) {
         itemToReturn = @"have an apple";
-    } else if (dollars == computer) {
+    } else if (dollars < bigApple) {
         itemToReturn = @"have an Apple computer";
-    } else if (dollars == bigApple) {
+    } else if (dollars >= bigApple) {
         itemToReturn = @"have The Big Apple";
     } else {
         itemToReturn = getOut;
