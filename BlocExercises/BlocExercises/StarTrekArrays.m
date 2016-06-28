@@ -34,8 +34,9 @@
 }
 
 - (BOOL) characterArrayContainsWorf:(NSArray *)characterArray {
-    NSString *starTrekString = [characterArray componentsJoinedByString:@";"];
-    NSMutableArray *starTrekArray = [[starTrekString componentsSeparatedByString:@";"]mutableCopy];
+    //NSString *starTrekString = [characterArray componentsJoinedByString:@";"];
+    //NSMutableArray *starTrekArray = [[starTrekString componentsSeparatedByString:@";"]mutableCopy];
+    NSMutableArray *starTrekArray = [characterArray mutableCopy];
     NSPredicate *containsWorf = [NSPredicate predicateWithFormat:@"SELF CONTAINS[c] 'worf'"];
     [starTrekArray filterUsingPredicate:containsWorf];
     
