@@ -24,11 +24,21 @@ NSDictionary *picardDictionary = @{@"name": @"Jean-Luc Picard",
 NSDictionary *starTrekDictionary = @{@"Worf" : worfDictionary,
                                      @"Picard" : picardDictionary};
 
+/*
+ NSDictionary *dictionaryKeys = @{@"name" : name,
+                              @"rank" : rank,
+                              @"information" : information,
+                              @"favorite drink" : favoriteDrink,
+                              @"quote" : quote}; 
+ */
+
 
 - (NSString *)favoriteDrinkForStarTrekCharacterDictionary:(NSDictionary *)characterDictionary {
+    //Determine which character
     [starTrekDictionary enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *STOP){
-        NSString *favDrink = objectForKey (character.favoriteDrink)
     }];
+    //Find character's favorite drink
+    NSString *favDrink = objectForKey(character.favorite drink);
     
     /* WORK HERE */
     return @"";
