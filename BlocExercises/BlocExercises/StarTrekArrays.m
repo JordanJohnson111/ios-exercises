@@ -34,23 +34,27 @@
 }
 
 - (BOOL) characterArrayContainsWorf:(NSArray *)characterArray {
+    
+    
+    for (NSString *character in characterArray) {
+        if ([character.lowercaseString rangeOfString:@"worf"].location != NSNotFound) {
+            return YES;
+        }
+    }
+    
+    return NO;
     //NSString *starTrekString = [characterArray componentsJoinedByString:@";"];
     //NSMutableArray *starTrekArray = [[starTrekString componentsSeparatedByString:@";"]mutableCopy];
-    NSMutableArray *starTrekArray = [characterArray mutableCopy];
-    NSPredicate *containsWorf = [NSPredicate predicateWithFormat:@"SELF CONTAINS[c] 'worf'"];
-    [starTrekArray filterUsingPredicate:containsWorf];
-    
-    if (starTrekArray.count >= 1) {
-        BOOL worfExists = YES;
-        return worfExists;
-    } else {
-        BOOL worfExists = NO;
-        return worfExists;
-    }
-
+//    NSMutableArray *starTrekArray = [characterArray mutableCopy];
+//    NSPredicate *containsWorf = [NSPredicate predicateWithFormat:@"SELF CONTAINS[c] 'worf'"];
+//    [starTrekArray filterUsingPredicate:containsWorf];
+//    
+//    return (starTrekArray.count >= 1);
     /* NSString *worfString = [starTrekArray componentsJoinedByString:@";"];
     BOOL worfExists = worfString != nil; */
     /* WORK HERE */
+    
+    
 }
 
 @end
