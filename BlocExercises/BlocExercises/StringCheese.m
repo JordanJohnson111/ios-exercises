@@ -33,7 +33,7 @@
 //    } else {
 //        NSString *cheeseOnly = cheeseName;
 //        return cheeseOnly;
-//        /* WORK HERE, ASSUMING `cheeseName` DOES NOT END WITH " cheese" */
+//        /* WORK HERE, ASSUMING `cheeseName` DOES NOT END WITH " cheese"  */
 //    /*
 //    }
 //}
