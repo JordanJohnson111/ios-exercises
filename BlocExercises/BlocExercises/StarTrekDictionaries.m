@@ -29,8 +29,14 @@
 }
 
 - (NSArray *)arrayOfFavoriteDrinksForStarTrekCharacters:(NSArray *)charactersArray {
+    NSMutableArray *favoriteDrinks;
+    for (NSString *drink in charactersArray) {
+        if (drink isEqualToString:(@"favorite drink") {
+            [favoriteDrinks addObject: drink]
+        }
+    }
     /* WORK HERE */
-    return @[];
+    return favoriteDrinks;
 }
 
 - (NSDictionary *)dictionaryWithQuoteAddedToStarTrekCharacterDictionary:(NSDictionary *)characterDictionary {
