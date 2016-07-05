@@ -29,18 +29,17 @@
 }
 
 - (NSArray *)arrayOfFavoriteDrinksForStarTrekCharacters:(NSArray *)charactersArray {
+
     
-//    NSMutableArray *favoriteDrinks;
-//    for (NSString *drink in charactersArray) {
-//        if ([drink containsString:@"favorite drink"]) {
-//            [favoriteDrinks addObject: drink];
-//            //possibly need to delete "favorite drink" from each item?
-//        }
-//    }
-    
-    NSPredicate *containsFavoriteDrink = [NSPredicate predicateWithFormat:@"SELF CONTAINS[c] 'favorite drink'"];
-    NSArray *favoriteDrinks = [charactersArray filteredArrayUsingPredicate:containsFavoriteDrink];
-    
+    NSMutableArray *favoriteDrinks = [[NSMutableArray alloc] initWithCapacity:charactersArray.count];
+    for (NSDictionary *character in charactersArray) {
+        NSString *drink = [self favoriteDrinkForStarTrekCharacterDictionary:character];
+        if (drink) {
+            [favoriteDrinks addObject: drink];
+            //possibly need to delete "favorite drink" from each item?
+        }
+    }
+
     /* WORK HERE */
     return favoriteDrinks;
 }
