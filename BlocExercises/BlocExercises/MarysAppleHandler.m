@@ -16,7 +16,7 @@
     NSInteger apple = 6;
     NSInteger computer = 1000;
     NSInteger bigApple = 1000000000;
-    NSString *getOut = @"get out of my store";
+//    NSString *getOut = @"get out of my store";
     
     if (dollars < gum) {
         itemToReturn = @"get out of my store";
@@ -26,10 +26,8 @@
         itemToReturn = @"have an apple";
     } else if (dollars < bigApple) {
         itemToReturn = @"have an Apple computer";
-    } else if (dollars >= bigApple) {
-        itemToReturn = @"have The Big Apple";
     } else {
-        itemToReturn = getOut;
+        itemToReturn = @"have The Big Apple";
     }
     
 
