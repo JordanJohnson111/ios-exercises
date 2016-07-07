@@ -29,12 +29,21 @@
 }
 
 - (NSInteger) lowestNumberInArray:(NSArray *)arrayOfNumbers {
-    NSMutableArray *sortedArray = [arrayOfNumbers mutableCopy];
-    NSSortDescriptor *descending = [[NSSortDescriptor alloc] initWithKey:nil ascending:NO];
-    [sortedArray sortUsingDescriptors:@[descending]];
-    NSNumber *lowest = [NSNumber numberWithInt:[[sortedArray firstObject] intValue]];
-    /* WORK HERE */
+//    NSMutableArray *sortedArray = [arrayOfNumbers mutableCopy];
+//    NSSortDescriptor *descending = [[NSSortDescriptor alloc] initWithKey:nil ascending:YES];
+//    [sortedArray sortUsingDescriptors:@[descending]];
+//    NSNumber *lowest = [NSNumber numberWithInt:[[sortedArray firstObject] intValue]];
+//    /* WORK HERE */
+//    return [lowest intValue];
+    
+    NSNumber *lowest = arrayOfNumbers[0];
+    for (NSNumber *num in arrayOfNumbers) {
+        if ([num intValue] < [lowest intValue]) {
+            lowest = num;
+        }
+    }
     return [lowest intValue];
+//    return YES;
 }
 
 @end
