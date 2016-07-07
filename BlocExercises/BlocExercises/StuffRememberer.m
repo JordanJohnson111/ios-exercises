@@ -26,11 +26,12 @@
 }
 
 - (NSMutableArray *) arrayYouShouldRemember {
-    NSMutableArray *myArray = [[NSMutableArray alloc] init];
-    [myArray rememberThisArrayForLater];
-    
+    //NSMutableArray *myArray = [[NSMutableArray alloc] init];
+    //[myArray rememberThisArrayForLater];
+
     /* WORK HERE */
-    return [myArray.rememberedArray mutableCopy];
+    //return [myArray.rememberedArray mutableCopy];
+    return [@[] mutableCopy];
 }
 
 - (NSMutableArray *) arrayYouShouldCopy {
