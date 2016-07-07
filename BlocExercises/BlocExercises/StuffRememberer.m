@@ -28,10 +28,18 @@
 - (NSMutableArray *) arrayYouShouldRemember {
     //NSMutableArray *myArray = [[NSMutableArray alloc] init];
     //[myArray rememberThisArrayForLater];
-
+    
+    //[_rememberedArray rememberThisArrayForLater]
+    
+    NSMutableArray *myArray = [self.rememberedArray mutableCopy];
+    
+    //NSMutableArray *myArray = [someObject rememeberThisArrayForLater];
+    //What is the Object?
+    
     /* WORK HERE */
     //return [myArray.rememberedArray mutableCopy];
-    return [@[] mutableCopy];
+    //return [@[] mutableCopy];
+    return myArray;
 }
 
 - (NSMutableArray *) arrayYouShouldCopy {
