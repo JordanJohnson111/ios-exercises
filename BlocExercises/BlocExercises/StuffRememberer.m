@@ -33,6 +33,8 @@
     
     NSMutableArray *myArray = [self.rememberedArray mutableCopy];
     
+    //NSMutableArray *myArray2 = rememberThisArrayForLater.rememberedArray;
+    
     //NSMutableArray *myArray = [someObject rememeberThisArrayForLater];
     //What is the Object?
     
