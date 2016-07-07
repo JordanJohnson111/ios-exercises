@@ -7,11 +7,13 @@ Strings
 */
 
 func favoriteCheeseStringWithCheese(cheese: String) -> String {
+    //print("My Favorite cheese is \(cheese)")
     // WORK HERE
-    return cheese
+    return "My Favorite cheese is " + cheese
 }
 
 let fullSentence = favoriteCheeseStringWithCheese("cheddar")
+
 // Make fullSentence say "My favorite cheese is cheddar."
 
 /*
@@ -20,11 +22,20 @@ Arrays & Dictionaries
 
 */
 
-let numberArray = [1, 2, 3, 4]
+var numberArray = [1, 2, 3, 4]
+numberArray.append(5)
+        //NewElement, element?????
+
+
+let numberArraySecond = [1, 2, 3, 4]
+let fiveArray = [5]
+let newArray = numberArraySecond + fiveArray
+
 // Add 5 to this array
 // WORK HERE
 
-let numberDictionary = [1 : "one", 2 : "two", 3 : "three", 4 : "four"]
+var numberDictionary = [1 : "one", 2 : "two", 3 : "three", 4 : "four"]
+//numberDictionary append(5 : "five")
 // Add 5 : "five" to this dictionary
 // WORK HERE
 
@@ -35,9 +46,20 @@ Loops
 */
 
 // Use a closed range loop to print 1 - 10, inclusively
+for var i = 1; i <= 10; i += 1 {
+    print(i)
+}
+
+for i in 1...10 {
+    print(i)
+    return i
+}
 // WORK HERE
 
 // Use a half-closed range loop to print 1 - 10, inclusively
+for i in 1..<10 {
+    print(i)
+}
 // WORK HERE
 
 let worf = [
@@ -57,8 +79,19 @@ let characters = [worf, picard]
 
 func favoriteDrinksArrayForCharacters(characters:[[String : String]]) -> [String] {
     // return an array of favorite drinks, like ["prune juice", "tea, Earl Grey, hot"]
+    //var favoriteDrinks = [array new]
+//    for characteristic in worf {
+//        print( (characteristic))
+//        favoriteDrinks.append(characteristic)
+//    }
+//    for character in characters
+//        for item in character
+//            add item.favorite drink
+//    for character in characters
+//        var drink = character["favorite drink"]
+    
     // WORK HERE
-    return []
+    //return [favoriteDrinks]
 }
 
 let favoriteDrinks = favoriteDrinksArrayForCharacters(characters)
@@ -73,9 +106,13 @@ Optionals
 
 func emailFromUserDict(userDict : [String : String]) -> String {
     // Return the user's email address from userDict, or return "" if they don't have one
-    
+    if let email = userDict["email"] {
+        print email
+    } else {
+        print ""
+    }
     // WORK HERE
-    return "user@example.com"
+    return email
 }
 
 
@@ -99,6 +136,11 @@ Functions
 
 let strings = ["milk", "eggs", "bread", "challah"]
 
+func printWithSemicolon() {
+    for item in strings {
+        var newString = item + ";"
+    }
+}
 // WORK HERE - make your function and pass `strings` in
 
 let expectedOutput = "milk;eggs;bread;challah"
@@ -112,4 +154,17 @@ Closures
 let cerealArray = ["Golden Grahams", "Cheerios", "Trix", "Cap'n Crunch OOPS! All Berries", "Cookie Crisp"]
 
 // Use a closure to sort this array alphabetically
+//    {let cerealsSortedAlphabetically = sorted(cerealArray, <)
+//}
+
+func cerealAlphabeticalSort(cereal1, cereal2) -> Bool {
+    return cereal1 > cereal2
+}
+
+let cerealSortedAlphabetically = sorted(cerealArray, cerealAlphabetical)
+
+
+
+
+
 // WORK HERE
