@@ -9,7 +9,7 @@ Strings
 func favoriteCheeseStringWithCheese(cheese: String) -> String {
     //print("My Favorite cheese is \(cheese)")
     // WORK HERE
-    return "My Favorite cheese is " + cheese
+    return "My Favorite cheese is " + cheese + "."
 }
 
 let fullSentence = favoriteCheeseStringWithCheese("cheddar")
@@ -38,7 +38,9 @@ var numberDictionary = [1 : "one", 2 : "two", 3 : "three", 4 : "four"]
 //numberDictionary append(5 : "five")
 // Add 5 : "five" to this dictionary
 // WORK HERE
+numberDictionary[5] = "five"
 
+numberDictionary
 /*
 
 Loops
@@ -52,7 +54,7 @@ for var i = 1; i <= 10; i += 1 {
 
 for i in 1...10 {
     print(i)
-    return i
+    //return i
 }
 // WORK HERE
 
@@ -92,6 +94,7 @@ func favoriteDrinksArrayForCharacters(characters:[[String : String]]) -> [String
     
     // WORK HERE
     //return [favoriteDrinks]
+    return []
 }
 
 let favoriteDrinks = favoriteDrinksArrayForCharacters(characters)
@@ -107,12 +110,10 @@ Optionals
 func emailFromUserDict(userDict : [String : String]) -> String {
     // Return the user's email address from userDict, or return "" if they don't have one
     if let email = userDict["email"] {
-        print email
+        return email
     } else {
-        print ""
+        return ""
     }
-    // WORK HERE
-    return email
 }
 
 
@@ -136,10 +137,12 @@ Functions
 
 let strings = ["milk", "eggs", "bread", "challah"]
 
-func printWithSemicolon() {
+func printWithSemicolon() -> String {
     for item in strings {
         var newString = item + ";"
     }
+    
+    return ""
 }
 // WORK HERE - make your function and pass `strings` in
 
@@ -157,13 +160,14 @@ let cerealArray = ["Golden Grahams", "Cheerios", "Trix", "Cap'n Crunch OOPS! All
 //    {let cerealsSortedAlphabetically = sorted(cerealArray, <)
 //}
 
-func cerealAlphabeticalSort(cereal1, cereal2) -> Bool {
-    return cereal1 > cereal2
-}
+//func cerealAlphabeticalSort(cereal1, cereal2) -> Bool {
+//    return true
+//}
+//
+//let cerealSortedAlphabetically = sorted(cerealArray, cerealAlphabetical)
+//
 
-let cerealSortedAlphabetically = sorted(cerealArray, cerealAlphabetical)
-
-
+cerealArray.sort(<)
 
 
 
