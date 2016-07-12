@@ -82,19 +82,13 @@ let characters = [worf, picard]
 func favoriteDrinksArrayForCharacters(characters:[[String : String]]) -> [String] {
     // return an array of favorite drinks, like ["prune juice", "tea, Earl Grey, hot"]
     //var favoriteDrinks = [array new]
-//    for characteristic in worf {
-//        print( (characteristic))
-//        favoriteDrinks.append(characteristic)
-//    }
-//    for character in characters
-//        for item in character
-//            add item.favorite drink
-//    for character in characters
-//        var drink = character["favorite drink"]
-    
-    // WORK HERE
-    //return [favoriteDrinks]
-    return []
+    var drink = ""
+    var favoriteDrink = []
+    for person in characters {
+        drink = person["favorite drink"]!
+        favoriteDrink = favoriteDrink + [drink]
+    }
+    return [drink]
 }
 
 let favoriteDrinks = favoriteDrinksArrayForCharacters(characters)
@@ -139,7 +133,7 @@ let strings = ["milk", "eggs", "bread", "challah"]
 
 func printWithSemicolon() -> String {
     for item in strings {
-        var newString = item + ";"
+        //var newString = appendWithString(item + ";")
     }
     
     return ""
