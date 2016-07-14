@@ -27,9 +27,8 @@ numberArray.append(5)
         //NewElement, element?????
 
 
-let numberArraySecond = [1, 2, 3, 4]
-let fiveArray = [5]
-let newArray = numberArraySecond + fiveArray
+var numberArraySecond = [1, 2, 3, 4]
+numberArraySecond.append(5)
 
 // Add 5 to this array
 // WORK HERE
@@ -82,13 +81,12 @@ let characters = [worf, picard]
 func favoriteDrinksArrayForCharacters(characters:[[String : String]]) -> [String] {
     // return an array of favorite drinks, like ["prune juice", "tea, Earl Grey, hot"]
     //var favoriteDrinks = [array new]
-    var drink = ""
-    var favoriteDrink = []
+    var favoriteDrink : [String] = []
     for person in characters {
-        drink = person["favorite drink"]!
-        favoriteDrink = favoriteDrink + [drink]
+        let drink = person["favorite drink"]!
+        favoriteDrink.append(drink)
     }
-    return [drink]
+    return favoriteDrink
 }
 
 let favoriteDrinks = favoriteDrinksArrayForCharacters(characters)
