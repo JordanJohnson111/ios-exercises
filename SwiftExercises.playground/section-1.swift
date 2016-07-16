@@ -130,13 +130,16 @@ Functions
 let strings = ["milk", "eggs", "bread", "challah"]
 
 func printWithSemicolon() -> String {
+    var newString = ""
     for item in strings {
-        //var newString = appendWithString(item + ";")
+        newString += item + ";"
     }
-    
-    return ""
+    let finalString = String(newString.characters.dropLast())
+    return finalString
 }
 // WORK HERE - make your function and pass `strings` in
+
+printWithSemicolon()
 
 let expectedOutput = "milk;eggs;bread;challah"
 
